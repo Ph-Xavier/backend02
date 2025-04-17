@@ -1,0 +1,16 @@
+inicializar o projeto
+    npm init
+
+instala express
+    npm install express
+
+instalar express ejs
+    npm install express ejs
+
+instalar nodemon
+    npm install nodemon
+
+
+instalar mysql
+    npm install --save mysql2
+
