@@ -1,5 +1,4 @@
 var mysql = require('mysql2')
-//var database = "livros"
 var database = "papelaria";
 
 var conexao = mysql.createConnection({

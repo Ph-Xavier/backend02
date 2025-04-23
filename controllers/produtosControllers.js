@@ -4,7 +4,8 @@ module.exports = {
     getAll,
     getById,
     create,
-
+    update,
+    remove,
 }
 
 function getAll(req, res){
@@ -42,6 +43,35 @@ function create(req, res){
             throw err;
         } else {
             console.log('Retornando da Model Produto...')
+            console.log('Resultado: ', resultado)
+            return res.json(resultado)
+        }
+    })
+}
+
+function update(req, res){
+    let cod = req.params.id
+    let dados = req.body
+    console.log('\nControllers - Alterando registro de Produtos...', cod)
+    produtosModels.update(dados, cod, function(err, resultado){
+        if(err){
+            throw err;
+        } else {
+            console.log('Retornando da Alteração na Model Produto...')
+            console.log('Resultado: ', resultado)
+            return res.json(resultado)
+        }
+    })
+}
+
+function remove(req, res){
+    let cod = req.params.id
+    console.log('\nControllers - Excluíndo registro de Produtos...', cod)
+    produtosModels.remove(cod, function(err, resultado){
+        if(err){
+            throw err;
+        } else {
+            console.log('Retornando da Exclusão na Model Produto...')
             console.log('Resultado: ', resultado)
             return res.json(resultado)
         }
