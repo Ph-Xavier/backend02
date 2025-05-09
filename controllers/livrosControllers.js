@@ -17,4 +17,3 @@ function getAll(req, res){
         }
     })
 }
-
