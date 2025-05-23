@@ -1,4 +1,5 @@
 const express = require('express')
+// const body = require('body-parser')
 const app = express()
 const port = 3000
 
@@ -23,3 +24,5 @@ try {
 } catch (error) {
     console.log('Ocorreu um ERRO ao inicializar o servidor ')
 }
+
+module.exports = app
